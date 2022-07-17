@@ -15,7 +15,7 @@ export default {
 
 <style lang="scss" scoped>
 .types {
-  background: #c4c4c4;
+  background:#d4a03a;
   display: flex;
   text-align: center;
   font-size: 24px;
@@ -33,7 +33,7 @@ export default {
       left: 0;
       width: 100%;
       height: 4px;
-      background: #333;
+      background:#262a2d;
     }
   }
 }

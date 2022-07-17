@@ -32,6 +32,7 @@ export default {
   .output {
     @extend %clearFix;
     @extend %innerShadow;
+    background:#e9eae4;
     font-size: 36px;
     font-family: Consolas, monospace;
     padding: 9px 16px;
@@ -52,7 +53,7 @@ export default {
       &.zero {
         width: 25*2%;
       }
-      $bg: #f2f2f2;
+      $bg:#f2ebd9;
       &:nth-child(1) {
         background: $bg;
       }

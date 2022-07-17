@@ -20,10 +20,6 @@
       <li>食</li>
       <li>住</li>
       <li>行</li>
-      <li>衣</li>
-      <li>食</li>
-      <li>住</li>
-      <li>行</li>
     </ul>
   </div>
 
@@ -37,6 +33,7 @@ export default {
 
 <style lang="scss" scoped>
 .tags {
+  background:#f0e4d4;
   font-size: 14px;
   padding: 16px;
   flex-grow: 1;
@@ -46,11 +43,11 @@ export default {
     display: flex;
     flex-wrap: wrap;
     > li {
-      background: #d9d9d9;
+      background: #d3d6c5;
       $h: 24px;
       height: $h;
       line-height: $h;
-      border-radius: calc( $h /2);
+      border-radius: $h/2;
       padding: 0 16px;
       margin-right: 12px;
       margin-top: 4px;
