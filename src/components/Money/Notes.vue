@@ -8,9 +8,18 @@
 </template>
 
 <script lang="ts">
-export default {
-  name: 'Notes'
-};
+import Vue from 'vue';
+import {Component, Prop} from 'vue-property-decorator';
+@Component
+export default class Types extends Vue {
+  type = '-'; // '-'表示支出，'+'表示收入
+  selectType(type: string) {
+    if (type !== '-' && type !== '+') {
+      throw new Error('type is unknown');
+    }
+    this.type = type;
+  }
+}
 </script>
 
 <style lang="scss" scoped>
