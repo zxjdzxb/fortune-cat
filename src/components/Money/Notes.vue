@@ -2,24 +2,23 @@
 <div>
 <label class="notes">
   <span class="name">备注</span>
-  <input type="text" placeholder="在这里输入备注">
+  <input type="text" :value="value"  @input="onInput" placeholder="在这里输入备注">
 </label>
 </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-import {Component, Prop} from 'vue-property-decorator';
+import {Component} from 'vue-property-decorator';
 @Component
-export default class Types extends Vue {
-  type = '-'; // '-'表示支出，'+'表示收入
-  selectType(type: string) {
-    if (type !== '-' && type !== '+') {
-      throw new Error('type is unknown');
-    }
-    this.type = type;
+export default class Notes extends Vue {
+  value = '';
+  onInput(event: KeyboardEvent): void {
+    const input = event.target as HTMLInputElement;
+    this.value = input.value;
   }
 }
+
 </script>
 
 <style lang="scss" scoped>
