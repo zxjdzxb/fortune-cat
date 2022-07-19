@@ -63,7 +63,7 @@ export default class Tags extends Vue {
       $h: 24px;
       height: $h;
       line-height: $h;
-      border-radius: calc(#{$h/2});
+      math.div($h, 2)
       padding: 0 16px;
       margin-right: 12px;
       margin-top: 4px;
