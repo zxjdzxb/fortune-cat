@@ -1,5 +1,5 @@
 module.exports = {
-  "globals": { "RecordItem": true },
+  "globals": {"RecordItem": true},
   root: true,
   env: {
     node: true
@@ -16,15 +16,17 @@ module.exports = {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
   },
-  overrides: [
+
+  "overrides": [
     {
-      files: [
-        '**/__tests__/*.{j,t}s?(x)',
-        '**/tests/unit/**/*.spec.{j,t}s?(x)'
+      "files": [
+        "**/*.spec.js",
+        "**/*.spec.jsx"
       ],
-      env: {
-        jest: true
+      "env": {
+        "jest": true
       }
     }
   ]
+
 }

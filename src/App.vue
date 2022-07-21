@@ -1,12 +1,10 @@
 <template>
   <div id="app">
-    <router-view/>
+    <router-view />
 
   </div>
 </template>
-<script lang="js">
 
-</script>
 
 <style lang="scss">
 @import "~@/assets/style/helper.scss";
@@ -21,5 +19,4 @@ body {
   color: #333;
   background: #f5f5f5;
 }
-
 </style>
