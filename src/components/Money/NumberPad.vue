@@ -28,8 +28,6 @@ import {Component, Prop} from 'vue-property-decorator';
 export default class NumberPad extends Vue {
   @Prop(Number) readonly value!: number;
   output = this.value.toString();
-
-  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   inputContent(event: MouseEvent) {
     const button = (event.target as HTMLButtonElement);
     const input = button.textContent as string;
@@ -46,8 +44,6 @@ export default class NumberPad extends Vue {
     if (this.output.indexOf('.') >= 0 && input === '.') {return;}
     this.output += input;
   }
-
-  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   remove() {
     if (this.output.length === 1) {
       this.output = '0';
@@ -55,13 +51,9 @@ export default class NumberPad extends Vue {
       this.output = this.output.slice(0, -1);
     }
   }
-
-  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   clear() {
     this.output = '0';
   }
-
-  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   ok() {
     const number = parseFloat(this.output);
     this.$emit('update:value', number);

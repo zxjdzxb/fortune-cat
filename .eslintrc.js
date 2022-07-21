@@ -21,8 +21,12 @@ module.exports = {
     {
       "files": [
         "**/*.spec.js",
-        "**/*.spec.jsx"
+        "**/*.spec.jsx",
+        '*.ts'
       ],
+      "rules": {
+        'no-undef': 'off'
+      },
       "env": {
         "jest": true
       }
