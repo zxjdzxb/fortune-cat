@@ -54,6 +54,7 @@ export default class Statistics extends Vue {
   }
 
   get recordList() {
+    //eslint-disable-next-line no-undef
     return (this.$store.state as RootState).recordList;
   }
 
@@ -98,10 +99,10 @@ export default class Statistics extends Vue {
 }
 ::v-deep {
   .type-tabs-item {
-    background: #C4C4C4;
+    background:#d3d6c5 ;
 
     &.selected {
-      background: white;
+      background: #ebcaa7;
 
       &::after {
         display: none;
@@ -127,7 +128,8 @@ export default class Statistics extends Vue {
 }
 
 .record {
-  background: white;
+  background: #f2efd0;
+  border-bottom: 1px solid #f0e4d4;
   @extend %item;
 }
 
