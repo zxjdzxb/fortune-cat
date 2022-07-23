@@ -71,10 +71,13 @@ export default class Money extends Vue {
 }
 
 .notes {
-  padding: 12px 0;
+  padding: 5px 0;
+  background: #f2efd0;
+}
 
   .createdAt {
-    padding: 12px 0;
+    padding: 2px 0;
+    background: #f2ebd9;
   }
-}
+
 </style>
