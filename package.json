@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build:dev":"cross-env NODE_ENV=development yarn build",
+    "build:dev": "cross-env NODE_ENV=development yarn build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
@@ -13,6 +13,8 @@
     "core-js": "^3.6.5",
     "cross-env": "^7.0.3",
     "dayjs": "^1.11.4",
+    "echarts": "^4.8.0",
+    "lodash": "^4.17.21",
     "register-service-worker": "^1.7.1",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.3",
@@ -21,7 +23,9 @@
     "vuex": "^3.4.0"
   },
   "devDependencies": {
+    "@types/echarts": "^4.6.3",
     "@types/jest": "^24.0.19",
+    "@types/lodash": "^4.14.182",
     "@typescript-eslint/eslint-plugin": "^4.18.0",
     "@typescript-eslint/parser": "^4.18.0",
     "@vue/cli-plugin-babel": "^4.1.2",

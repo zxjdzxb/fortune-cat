@@ -29,30 +29,28 @@ import {Component} from 'vue-property-decorator';
 import Tabs from '@/components/Tabs.vue';
 import recordTypeList from '@/constants/recordTypeList';
 
-
 @Component({
   components: {Tabs, Tags, FormItem, NumberPad},
-  computed: {
-
-    recordList() {
-      return this.$store.state.recordList;
-    }
-  }
 })
 export default class Money extends Vue {
   get recordList() {
     return this.$store.state.recordList;
   }
+
+  recordTypeList = recordTypeList;
+
   record: RecordItem = {
     tags: [], notes: '', type: '-', amount: 0, createdAt: new Date().toISOString()
   };
-  recordTypeList = recordTypeList;
+
   created() {
     this.$store.commit('fetchRecords');
   }
+
   onUpdateNotes(value: string) {
     this.record.notes = value;
   }
+
   saveRecord() {
     if (!this.record.tags || this.record.tags.length === 0) {
       return window.alert('请至少选择一个标签');
@@ -65,19 +63,18 @@ export default class Money extends Vue {
   }
 }
 </script>
-<style lang="scss" scoped>
 
+<style lang="scss" scoped>
 ::v-deep .layout-content {
   display: flex;
   flex-direction: column-reverse;
 }
-.notes{
-  padding: 6px 0;
-  background: #f2eecf;
-  border-bottom: 0.5px solid #edcb9c;
-}
-.createdAt{
-  padding: 2px 0;
-  background: #f2eecf;
+
+.notes {
+  padding: 12px 0;
+
+  .createdAt {
+    padding: 12px 0;
+  }
 }
 </style>
