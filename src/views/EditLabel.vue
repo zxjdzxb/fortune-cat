@@ -53,7 +53,6 @@ export default class EditLabel extends Vue {
   }
 
   goBack() {
-    console.log('back');
     this.$router.back();
   }
 }

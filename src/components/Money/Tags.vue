@@ -37,11 +37,9 @@ export default class Tags extends mixins(TagHelper) {
       this.selectedTags.splice(index, 1);
     } else {
       this.selectedTags.push(tag);
-      return;
     }
     this.$emit('update:value', this.selectedTags);
   }
-
 }
 </script>
 

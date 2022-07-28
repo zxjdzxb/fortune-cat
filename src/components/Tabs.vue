@@ -20,6 +20,7 @@ export default class Tabs extends Vue {
   classPrefix?: string;
   @Prop({type: String, default: '64px'})
   height!: string;
+
   liClass(item: DataSourceItem) {
     return {
       [this.classPrefix + '-tabs-item']: this.classPrefix,

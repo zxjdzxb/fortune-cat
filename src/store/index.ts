@@ -5,6 +5,7 @@ import createId from '@/lib/createId';
 import router from '@/router';
 
 Vue.use(Vuex);
+
 const store = new Vuex.Store({
   state: {
     recordList: [],
@@ -13,7 +14,6 @@ const store = new Vuex.Store({
     tagList: [],
     currentTag: undefined
   } as RootState,
-
   mutations: {
     setCurrentTag(state, id: string) {
       state.currentTag = state.tagList.filter(t => t.id === id)[0];
@@ -63,8 +63,9 @@ const store = new Vuex.Store({
         JSON.stringify(state.recordList));
     },
     fetchTags(state) {
-      return state.tagList = JSON.parse(window.localStorage.getItem('tagList') || '[]');
+      state.tagList = JSON.parse(window.localStorage.getItem('tagList') || '[]');
       if (!state.tagList || state.tagList.length === 0) {
+        console.log("hi");
         store.commit('createTag', '衣');
         store.commit('createTag', '食');
         store.commit('createTag', '住');
@@ -84,7 +85,7 @@ const store = new Vuex.Store({
     },
     saveTags(state) {
       window.localStorage.setItem('tagList', JSON.stringify(state.tagList));
-    }
+    },
   }
 });
 
